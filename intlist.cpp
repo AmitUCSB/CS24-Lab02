@@ -83,12 +83,13 @@ double IntList::average() const {
     int count = 0;
     double sum = 0;
     Node* p = head;
+    if (head == nullptr) return 0.0;
     while(p != nullptr) {
         count++;
         sum += p->info;
         p =  p->next;
     }
-    return sum/count; // REPLACE THIS NON-SOLUTION
+    return sum/count;
 }
 
 // inserts value as new node at beginning of list
